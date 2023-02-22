@@ -1,0 +1,76 @@
+
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+header{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+header a{
+    top: 10%;
+    color: white;
+    text-decoration: none;
+}
+
+
+header li, ul{
+    display: inline;
+}
+
+.navbar{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.navbar>.confusu{
+    float: right;
+    width: 20%;
+    margin-right: 1%;
+}
+.navbar>.confusu>a{
+    margin: 4%;
+    float: right;
+}
+
+.navbar>.confusu>a>img{
+    padding: 1%;
+}
+
+.navbar>.categoria{
+    float: left;
+    width: 50%;    
+    text-align: center;
+
+}
+.navbar>.categoria>a{
+    margin: 2%;
+
+}
+
+
+.navbar>.categoria>a, .navbar>.confusu>a>img {
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.navbar>.categoria>a:hover, .navbar>.confusu>a:hover{
+    background-size: 100% 2px;
+}
+
+
+#logo{
+    float: left;
+}

@@ -1,0 +1,26 @@
+{
+    "name": "rauescu/proyecto_final",
+    "autoload": {
+        "psr-4": {
+            "Usuario\\ProyectoCursos\\": "./",
+            "Controller\\" :  "./Controller",
+            "Models\\" : "./Models",
+            "Lib\\" :  "./Lib",
+            "Services\\": "./services",
+            "Repositories\\": "./repositories",
+            "Utils\\": "./utils"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "Raul",
+            "email": "rauescu@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "firebase/php-jwt": "^6.3",
+        "phpmailer/phpmailer": "^6.7"
+    }
+}
