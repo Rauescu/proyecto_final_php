@@ -31,13 +31,15 @@ class ProductosController {
     public function nuevo() : void {
         // funcion para crear los productos
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            if ($this->utils->validar_crearProductos($_POST['nombre'])){
+            if ($this->utils->validar_crearProductos($_POST['data'])){
                 $imagen = str_replace(' ', '', $_POST['data']['nombre']);
                 $imagen = strtolower($imagen);
                 $_POST['data']['imagen'] = $imagen;
                 if($this->service->save($_POST['data'])){
                     echo 'guardado';
                 }
+            }else{
+                header("Location:" . $_ENV['base_url'] . "productos_nuevos");
             }
         }
     }

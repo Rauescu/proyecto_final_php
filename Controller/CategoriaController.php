@@ -32,7 +32,7 @@ class CategoriaController {
                 $result = $this->service->comprueba($_POST['nombre']);
                 if($result == false){
                     $this->service->crear($_POST['nombre']);
-                    // header("Location:" .$_ENV['base_url']);
+                    header("Location:" .$_ENV['base_url']);
                 }
             }
         }
