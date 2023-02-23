@@ -2,7 +2,13 @@
 
 use Repositories\ProductosRepository;
 
-$_SESSION['precio'] = 0 ?>
+$_SESSION['precio'] = 0;
+if (!isset($_SESSION['carrito'])){
+    $_SESSION['carrito'] = [];
+}
+
+
+?>
 <?php $productos = ProductosRepository::inicio(); ?>
 
 <h2 id="titulo_carrito">CARRITO</h2>
@@ -51,6 +57,8 @@ $_SESSION['precio'] = 0 ?>
 </div>
 <p id="total_carrito">Total = <?= $_SESSION['precio'] ?>€</p>
 
+<?php if($_SESSION['carrito'] != []):   ?>
 <a href="completar_datos">
     <h2>Comprar</h2>
 </a>
+<?php endif;?>
